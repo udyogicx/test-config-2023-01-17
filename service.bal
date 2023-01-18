@@ -6,7 +6,7 @@ import ballerina/http;
 
 configurable string greeting = ?;
 configurable string[] stringArray = ?;
-configurable int[] intArray = ?;
+configurable int[] intArray = [];
 
 service / on new http:Listener(9090) {
 
