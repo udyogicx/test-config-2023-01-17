@@ -6,6 +6,7 @@ import ballerina/http;
 
 configurable string greeting = ?;
 configurable string[] stringArray = ?;
+configurable float floatNum = ?;
 configurable int[] intArray = [];
 
 service / on new http:Listener(9090) {
@@ -17,6 +18,7 @@ service / on new http:Listener(9090) {
         // Send a response back to the caller.
         io:println("string array: ", stringArray);
         io:println("int array: ", intArray);
+        io:println("float number: ", floatNum);
         if name is "" {
             return error("name should not be empty!");
         }
