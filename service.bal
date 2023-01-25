@@ -1,4 +1,3 @@
-import ballerina/io;
 import ballerina/http;
 
 # A Ballerina service representing a network-accessible API
