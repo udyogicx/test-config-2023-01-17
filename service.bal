@@ -1,7 +1,7 @@
 import ballerina/io;
 import ballerina/http;
 
-# A ballerina service representing a network-accessible API
+# A Ballerina service representing a network-accessible API
 # bound to port `9090`.
 
 configurable string greeting = ?;
