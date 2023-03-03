@@ -4,6 +4,8 @@ import ballerina/http;
 # bound to port `9090`.
 # main branch
 
+configurable boolean isAdmin = ?;
+
 service / on new http:Listener(9090) {
 
     # A resource for generating greetings
@@ -14,6 +16,6 @@ service / on new http:Listener(9090) {
         if name is "" {
             return error("name should not be empty!");
         }
-        return "Hello, " + name;
+        return "Hello, " + name + " " + isAdmin.toString();
     }
 }
