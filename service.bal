@@ -5,8 +5,8 @@ import ballerina/http;
 
 
 configurable string greeting = "Halo";
-configurable count = 10;
-configurable isAdmin = true;
+configurable int count = 10;
+configurable boolean isAdmin = true;
 
 service / on new http:Listener(9090) {
 
