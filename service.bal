@@ -4,7 +4,7 @@ import ballerina/http;
 # bound to port `9090`.
 
 
-configurable string greeting = ?;
+configurable string greeting = "Halo";
 
 service / on new http:Listener(9090) {
 
