@@ -4,7 +4,7 @@ import ballerina/http;
 # bound to port `9090`.
 # Test branch
 
-service / on new http:Listener(9090) {
+service /greet on new http:Listener(9090) {
 
     # A resource for generating greetings
     # + name - the input string name
