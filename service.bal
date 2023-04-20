@@ -3,12 +3,18 @@ import ballerina/http;
 # A Ballerina service representing a network-accessible API
 # bound to port `9090`.
 
+# + title - the input string name
+# + author - string name with hello message or error
+# + status - string name with hello message or error
+type BookItem record {|
+    string title;
+    string author;
+    string status;
+|};
 
-configurable string greeting = "Halo";
-configurable int count = 10;
-configurable boolean isAdmin = true;
+configurable BookItem[] bookItemList = ?;
 
-service / on new http:Listener(9090) {
+service / on new http:Listener(9091) {
 
     # A resource for generating greetings
     # + name - the input string name
@@ -18,6 +24,6 @@ service / on new http:Listener(9090) {
         if name is "" {
             return error("name should not be empty!");
         }
-        return greeting + ", " + name + count.toString() + isAdmin.toString();
+        return "Hello, " + name + " " + bookItemList.toString();
     }
 }
