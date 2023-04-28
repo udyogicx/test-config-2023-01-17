@@ -5,8 +5,6 @@ import ballerina/http;
 
 
 configurable string greeting = "Halo";
-configurable int count = 10;
-configurable boolean isAdmin = true;
 
 service / on new http:Listener(9090) {
 
@@ -18,7 +16,7 @@ service / on new http:Listener(9090) {
         if name is "" {
             return error("name should not be empty!");
         }
-        return greeting + ", " + name + count.toString() + isAdmin.toString();
+        return greeting + ", " + name;
     }
 }
 
