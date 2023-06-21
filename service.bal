@@ -8,7 +8,7 @@ configurable string greeting = "Halo";
 configurable int count = 10;
 configurable boolean isAdmin = true;
 
-service / on new http:Listener(9090) {
+service / on new http:Listener(9091) {
 
     # A resource for generating greetings
     # + name - the input string name
